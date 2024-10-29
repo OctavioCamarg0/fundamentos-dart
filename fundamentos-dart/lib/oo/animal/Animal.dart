@@ -1,17 +1,21 @@
-import 'Alimento.dart';
+import 'Acessorio.dart';
+import 'alimento.dart';
+import 'especie.dart';
 
 //Generalização
 
-abstract class Animal {
+abstract class Animal{
   String nome;
   double peso;
   Alimento alimento;
+  Especie especie;
 
-  Animal(this.nome, this.peso, this.alimento);
+  Animal(this.nome, this.peso, this.alimento, this.especie);
 
-  void fazerSom();
+  void fazerSom([Acessorio? acessorio]);  
 
-  void comer() {
+  void comer(){
     print('$nome comeu! - ${alimento.tipo}');
-  } 
+  }  
+  
 }
