@@ -3,5 +3,5 @@
 class Tratamento {
   String descricao;
 
-  Tratamento(this.descricao);
+  Tratamento(this.descricao);  
 }

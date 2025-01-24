@@ -1,4 +1,3 @@
-import 'Acessorio.dart';
 import 'animal.dart';
 import 'alimento.dart';
 import 'brinquedo.dart';
@@ -26,7 +25,7 @@ class Cachorro extends Animal {
   }
 
   @override //obrigatório
-  void fazerSom([Acessorio? acessorio]) {
+  void fazerSom() {
     print('$nome fez auau');
   }
 

@@ -1,4 +1,3 @@
-import 'Acessorio.dart';
 import 'alimento.dart';
 import 'especie.dart';
 
@@ -12,7 +11,7 @@ abstract class Animal{
 
   Animal(this.nome, this.peso, this.alimento, this.especie);
 
-  void fazerSom([Acessorio? acessorio]);  
+  void fazerSom();  
 
   void comer(){
     print('$nome comeu! - ${alimento.tipo}');

@@ -1,1 +1,0 @@
-enum Item{SININHO, BUZININHA}

@@ -1,35 +1,46 @@
 import 'dart:io';
 
 void main() {
-  const LimiteIdade = 16;
-  print("Digite uma idade: ");
+  const limiteIdade = 16;
+
+  print("Informe a sua idade: ");
   final idade = stdin.readLineSync();
-
+  /*
+  = -> atribuição
+  == -> Comparação
+  < -> Menor que
+  > => Maior que
+  <= -> Menor ou igual a
+  >= => Maior ou igual a
+  != -> Diferente
+  += -> soma e atribui
+  -= -> subtrai e atribui
+  *= -> multiplica e atribui
+  /= -> divide e atribui
+  ++ -> incrementa 1
+  -- -> decrementa 1
+  */
   if (idade != null) {
-    final idadeConvertida = int.tryParse(idade);
-    // if (idadeConvertida != null && idadeConvertida < LimiteIdade) {
-    //   print("Não pode voltar");
-    // } else if (idadeConvertida == LimiteIdade) {
-    //   print("Escolha com sabedoria filho!");
-    // } else {
-    //   print("Pode votar");
-    // }
+    final idadeConvertido = int.tryParse(idade);
 
-    final podeVotar = (idadeConvertida != null)?idadeConvertida >= LimiteIdade : false;
 
+    if (idadeConvertido != null && idadeConvertido < limiteIdade) {
+      print("Não pode votar");
+    }else if(idadeConvertido == limiteIdade){
+      print("Primeiro ano de votação!");
+    }else{
+      print("Pode votar");
+    }
+
+    // Operador ternário    
+    // (teste lógico)?Valor Se Verdadeiro:Valor Se Falso;
+    final podeVotar = (idadeConvertido != null) ? idadeConvertido >= limiteIdade : false;
+    
     if(podeVotar){
       print("Pode votar");
     }else{
-      print("Não pode votar!");
+      print("Não pode votar");
     }
-  }
-}
 
-  //   if (idadeConvertida != null ) {
-  //     if (idadeConvertida >= LimiteIdade) {
-  //       print("Pode votar");
-  //     } else {
-  //       print("Não pode voltar");
-  //     }
-  //   }
-  // }
+  }// Fim do if (idade != null)
+}

@@ -1,9 +1,11 @@
-import 'tratamento.dart';
-import 'veterinario.dart';
+import 'dart:ffi';
+
 import 'alimento.dart';
 import 'brinquedo.dart';
 import 'cachorro.dart';
 import 'gato.dart';
+import 'tratamento.dart';
+import 'veterinario.dart';
 
 void main(List<String> args) {
     var racaoGato = Alimento("ração de atum");
@@ -28,5 +30,6 @@ void main(List<String> args) {
     vetJoao.atender(cachorro);
 
     final vermifugar = Tratamento("Vermifugação");
-    vetJoao.atender(gato, vermifugar);
+    vetJoao.atender(gato,vermifugar);
+
 }

@@ -1,13 +1,17 @@
 import 'Forma.dart';
 import 'enum.dart';
 
-class Quadrado extends Forma {
+class Quadrado extends Forma{
   double lado = 0;
 
-  Quadrado(this.lado) : super(tpForma.Quadrado);
-
+  Quadrado( this.lado ) : super(tpForma.Quadrado){
+    Forma.idFormaClasse = 1;
+    super.idFormaInstancia = 1;
+  }
+ 
   @override
-  double calculaArea() {
+  double calculaArea(){
     return lado * lado;
   }
+
 }

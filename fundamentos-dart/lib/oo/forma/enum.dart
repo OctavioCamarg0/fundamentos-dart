@@ -1,2 +1,2 @@
 // Enumeration
-enum tpForma {Quadrado, Circulo, Triangulo, Retangulo}
+enum tpForma{ Quadrado, Circulo, Triangulo, Retangulo}
